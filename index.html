@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location GNB</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    nav {
+      background: steelblue;
+      display: flex;
+      padding: 20px;
+    }
+
+    .depth1-list {
+      display: none;
+    }
+
+    .depth1-list.on {
+      display: block;
+    }
+
+    nav .depth2 {
+      display: flex;
+    }
+
+    /* 버튼 디자인 */
+    nav .home {
+      margin-right: 1em;
+    }
+
+    .depth1-open-btn {
+      width: 100%;
+      display: block;
+      outline: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .depth2 > li {
+      margin-left: 2em;
+      font-size: 14px;
+    }
+
+    .depth1 {
+      position: relative;
+      outline: 1px solid red;
+      width: 200px;
+    }
+
+    .depth1 .depth1-list {
+      position: absolute;
+      bottom: -184px;
+      background: #ccc;
+      width: 100%;
+    }
+
+    .depth1 .depth1-list > li > a {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+    }
+
+    nav * {
+      color: #fff;
+    }
+
+    .depth1-list a {
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="home">Home</a>
+    <div class="depth1">
+      <a href="#" class="depth1-open-btn">회사소개 <span>▼</span></a>
+      <ul class="depth1-list">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">제품소개</a></li>
+        <li><a href="#">연구</a></li>
+        <li><a href="#">채용정보</a></li>
+      </ul>
+    </div>
+    <ul class="depth2">
+      <li>&gt;</li>
+      <li><a href="#">경영철학</a></li>
+      <li><a href="#">인사말</a></li>
+      <li><a href="#">연혁</a></li>
+      <li><a href="#">오시는길</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    $(function(){
+      $('.depth1-open-btn').click(function(){
+        $('.depth1-list').toggleClass('on');
+      })
+    })
+  </script>
+</body>
+</html>
