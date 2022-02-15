@@ -1,5 +1,6 @@
 # location-menu
-다층구조의 gnb 
+다층구조의 gnb
+demo: https://csslick.github.io/location-menu/
 https://www.figma.com/file/4UXZlI6OmkmoBtAbPIpKN2/location-menu?node-id=0%3A1
 
 ```
